@@ -1,4 +1,3 @@
-%define		_prefix /usr/X11R6
 Summary:	Open Source clone of Microcal Origin, data analysis and visualisation tool
 Summary(pl):	Klon Open Source programu Microcal Origin, narzêdzia do analizy i wizualizacji danych
 Name:		scigraphica
@@ -25,7 +24,7 @@ BuildRequires:	libxml-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel >= 4.0
 BuildRequires:	python
-BuildRequires:  python-devel
+BuildRequires:	python-devel
 BuildRequires:	python-numpy-devel
 Requires:	python-sg = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
