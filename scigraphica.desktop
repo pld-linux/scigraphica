@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SciGraphica
+Comment=A powerful plotting and data analysis program
+Comment[pl]=Rozbudowany program do prezentacji i analizy danych
+Icon=
+Exec=scigraphica
+Terminal=false
+Type=Application
+Categories=Education;Science;Math;
+# vi: encoding=utf-8
