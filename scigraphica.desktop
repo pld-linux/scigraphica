@@ -7,5 +7,5 @@ Icon=
 Exec=scigraphica
 Terminal=false
 Type=Application
-Categories=Education;Science;Math;
+Categories=Education;Science;X-Plotting
 # vi: encoding=utf-8
