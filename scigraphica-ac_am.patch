@@ -1,0 +1,75 @@
+diff -urN scigraphica-0.8.0/configure.in scigraphica-0.8.0.patch/configure.in
+--- scigraphica-0.8.0/configure.in	Fri Nov 30 17:29:12 2001
++++ scigraphica-0.8.0.patch/configure.in	Fri Nov 22 00:13:31 2002
+@@ -41,7 +41,7 @@
+ CFLAGS="$CFLAGS -I$termcap_include_path -I$readline_include_path"
+ 
+ dnl Check for termcap - fatal if it fails
+-AC_CHECK_LIB(termcap, tgoto,[TERMCAP_LIB="-ltermcap"],
++AC_CHECK_LIB(ncurses, tgoto,[TERMCAP_LIB="-lncurses"],
+ AC_MSG_ERROR(Termcap not found))
+ 
+ dnl Check for readline
+@@ -162,7 +162,7 @@
+ 		AC_SUBST(WITH_BONOBO)
+ 		AM_CONDITIONAL(WITH_BONOBO,$bonobo_ok)
+ 		AC_DEFINE(WITH_BONOBO)
+-		BONOBO_CFLAGS=`gnome-config --cflags bonobox_print`
++		BONOBO_CFLAGS="`gnome-config --cflags bonobox_print` -DWITH_BONOBO"
+ 		BONOBO_LIBS="-lbonobo-print `gnome-config --libs bonobox_print`"
+ 		bonobo_msg=yes
+ 	else
+diff -urN scigraphica-0.8.0/docs/Makefile.am scigraphica-0.8.0.patch/docs/Makefile.am
+--- scigraphica-0.8.0/docs/Makefile.am	Wed Aug 15 17:19:40 2001
++++ scigraphica-0.8.0.patch/docs/Makefile.am	Fri Nov 22 00:07:54 2002
+@@ -1,4 +1,3 @@
+-EXTRA_DIST += 
+ 
+ LYXFILES= \
+ FAQ.lyx  \
+@@ -25,7 +24,7 @@
+ 
+ 
+ 
+-EXTRA_DIST += \
++EXTRA_DIST = \
+ 	$(HTMLFILES) topic.dat
+ 
+ htmldir = $(datadir)/gnome/help/scigraphica/C/
+diff -urN scigraphica-0.8.0/examples/Makefile.am scigraphica-0.8.0.patch/examples/Makefile.am
+--- scigraphica-0.8.0/examples/Makefile.am	Sun Nov 11 00:46:00 2001
++++ scigraphica-0.8.0.patch/examples/Makefile.am	Fri Nov 22 00:07:54 2002
+@@ -12,7 +12,7 @@
+         py_example1.py \
+         py_example2.py
+ 
+-EXTRA_DIST += \
++EXTRA_DIST = \
+ 	$(EXAMPLES)
+ 
+ Examplesdir = $(datadir)/scigraphica/examples
+diff -urN scigraphica-0.8.0/pixmaps/Makefile.am scigraphica-0.8.0.patch/pixmaps/Makefile.am
+--- scigraphica-0.8.0/pixmaps/Makefile.am	Tue Nov 13 21:35:15 2001
++++ scigraphica-0.8.0.patch/pixmaps/Makefile.am	Fri Nov 22 00:07:54 2002
+@@ -145,7 +145,7 @@
+ 
+ ICONPIXMAP = sg_icon.xpm 
+ 
+-EXTRA_DIST += \
++EXTRA_DIST = \
+ 	$(ICONPIXMAP) $(PIXMAPS)
+ 
+ Pixmapdir = $(datadir)/pixmaps/$(PACKAGE)
+Binary files scigraphica-0.8.0/src/.sg.c.swp and scigraphica-0.8.0.patch/src/.sg.c.swp differ
+diff -urN scigraphica-0.8.0/src/python/Makefile.am scigraphica-0.8.0.patch/src/python/Makefile.am
+--- scigraphica-0.8.0/src/python/Makefile.am	Sat Nov 10 01:17:45 2001
++++ scigraphica-0.8.0.patch/src/python/Makefile.am	Fri Nov 22 00:07:54 2002
+@@ -27,7 +27,7 @@
+ 
+ noinst_LIBRARIES = libpint.a
+ 
+-EXTRA_DIST += \
++EXTRA_DIST = \
+ clarens.py \
+ clarens_histograms.py \
+ FitWizard.py \
