@@ -6,6 +6,7 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/scigraphica/%{name}-%{version}.tar.gz
+# Source0-md5:	8527c80fe75bc4f72c14548c7a2b0b71
 Source1:	%{name}.desktop
 #Source2:	zterm.desktop
 Patch0:		%{name}-ac_am.patch
