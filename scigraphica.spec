@@ -8,7 +8,7 @@ License:	GPL
 Group:		X11/Applications/Science
 Source0:	%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Source2:	zterm.desktop
+#Source2:	zterm.desktop
 URL:		http://scigraphica.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -56,14 +56,14 @@ Requires:	python-pygtk-gtk
 
 %description -n python-sg -l pl
 
-%package -n zterm
-Summary:	Pretty light-weight "yet another virtual terminal" program
-Summary(pl):	Kolejny wirtualny terminal, tym razem ca³kiem niewielki
-Group:		X11/Applications
+#%package -n zterm
+#Summary:	Pretty light-weight "yet another virtual terminal" program
+#Summary(pl):	Kolejny wirtualny terminal, tym razem ca³kiem niewielki
+#Group:		X11/Applications
 
-%description -n zterm
+#%description -n zterm
 
-%description -n zterm -l pl
+#%description -n zterm -l pl
 
 %prep
 %setup -q
@@ -87,26 +87,26 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_examplesdir},%{_applnkdir}/Scientific/Plotting,/usr/lib/python2.2/site-packages/sg,%{_applnkdir}/Terminals}
+install -d $RPM_BUILD_ROOT{%{_examplesdir},%{_desktopdir},/usr/lib/python2.2/site-packages/sg
 mv -f $RPM_BUILD_ROOT%{_datadir}/scigraphica/examples \
 	$RPM_BUILD_ROOT%{_examplesdir}/scigraphica
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Plotting/%{name}.desktop
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install src/python/sg.so $RPM_BUILD_ROOT/usr/lib/python2.2/site-packages/sg/sg.so
 
 install zvt/zterm $RPM_BUILD_ROOT%{_bindir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Terminals/zterm.desktop
+#install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Terminals/zterm.desktop
 
 echo "sg" > $RPM_BUILD_ROOT/usr/lib/python2.2/site-packages/sg.pth
 
 %clean
-#rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/scigraphica
 %{_datadir}/gnome/help/scigraphica
 %{_pixmapsdir}/*
-%{_applnkdir}/Scientific/Plotting/*
+%{_desktopdir}/*
 %doc docs/*.html docs/TODO
 
 %files examples
@@ -120,8 +120,8 @@ echo "sg" > $RPM_BUILD_ROOT/usr/lib/python2.2/site-packages/sg.pth
 /usr/lib/python2.2/site-packages/sg/*.py
 /usr/lib/python2.2/site-packages/*.pth
 
-%files -n zterm
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/zterm
-%{_applnkdir}/Terminals/zterm.desktop
-%doc zvt/README
+#%files -n zterm
+#%defattr(644,root,root,755)
+#%attr(755,root,root) %{_bindir}/zterm
+#%{_applnkdir}/Terminals/zterm.desktop
+#%doc zvt/README
