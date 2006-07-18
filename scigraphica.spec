@@ -25,8 +25,8 @@ BuildRequires:	libxml-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel >= 4.0
 BuildRequires:	python
+BuildRequires:	python-Numeric-devel
 BuildRequires:	python-devel
-BuildRequires:	python-numpy-devel
 Requires:	python-sg = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
