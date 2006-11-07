@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/scigraphica
 %{_datadir}/gnome/help/scigraphica
 %{_pixmapsdir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 
 %files examples
 %defattr(644,root,root,755)
