@@ -1,5 +1,5 @@
 Summary:	Open Source clone of Microcal Origin, data analysis and visualisation tool
-Summary(pl.UTF-8):   Klon Open Source programu Microcal Origin, narzędzia do analizy i wizualizacji danych
+Summary(pl.UTF-8):	Klon Open Source programu Microcal Origin, narzędzia do analizy i wizualizacji danych
 Name:		scigraphica
 Version:	0.8.0
 Release:	0.1
@@ -40,7 +40,7 @@ wizualizacji danych.
 
 %package examples
 Summary:	Examples of SciGraphica's possibilities
-Summary(pl.UTF-8):   Przykłady pokazujące możliwości programu SciGraphica
+Summary(pl.UTF-8):	Przykłady pokazujące możliwości programu SciGraphica
 Group:		X11/Applications/Science
 Requires:	%{name} = %{version}-%{release}
 
@@ -52,7 +52,7 @@ Przykłady pokazujące możliwości programu SciGraphica.
 
 %package -n python-sg
 Summary:	Python interface to SciGraphica routines
-Summary(pl.UTF-8):   Interfejs python do procedur SciGraphica
+Summary(pl.UTF-8):	Interfejs python do procedur SciGraphica
 Group:		Development/Languages/Python
 Requires:	python
 Requires:	python-pygtk-gtk
