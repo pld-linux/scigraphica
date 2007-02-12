@@ -1,5 +1,5 @@
 Summary:	Open Source clone of Microcal Origin, data analysis and visualisation tool
-Summary(pl):	Klon Open Source programu Microcal Origin, narzÍdzia do analizy i wizualizacji danych
+Summary(pl.UTF-8):   Klon Open Source programu Microcal Origin, narzƒôdzia do analizy i wizualizacji danych
 Name:		scigraphica
 Version:	0.8.0
 Release:	0.1
@@ -34,25 +34,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Open Source clone of Microcal Origin, data analysis and visualisation
 tool.
 
-%description -l pl
-Klon Open Source programu Microcal Origin, narzÍdzia do analizy i
+%description -l pl.UTF-8
+Klon Open Source programu Microcal Origin, narzƒôdzia do analizy i
 wizualizacji danych.
 
 %package examples
 Summary:	Examples of SciGraphica's possibilities
-Summary(pl):	Przyk≥ady pokazuj±ce moøliwo∂ci programu SciGraphica
+Summary(pl.UTF-8):   Przyk≈Çady pokazujƒÖce mo≈ºliwo≈õci programu SciGraphica
 Group:		X11/Applications/Science
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Examples of SciGraphica's possibilities.
 
-%description examples -l pl
-Przyk≥ady pokazuj±ce moøliwo∂ci programu SciGraphica.
+%description examples -l pl.UTF-8
+Przyk≈Çady pokazujƒÖce mo≈ºliwo≈õci programu SciGraphica.
 
 %package -n python-sg
 Summary:	Python interface to SciGraphica routines
-Summary(pl):	Interfejs python do procedur SciGraphica
+Summary(pl.UTF-8):   Interfejs python do procedur SciGraphica
 Group:		Development/Languages/Python
 Requires:	python
 Requires:	python-pygtk-gtk
@@ -60,19 +60,19 @@ Requires:	python-pygtk-gtk
 %description -n python-sg
 Python interface to SciGraphica routines.
 
-%description -n python-sg -l pl
+%description -n python-sg -l pl.UTF-8
 Interfejs python do procedur SciGraphica.
 
 #%package -n zterm
 #Summary:	Pretty light-weight "yet another virtual terminal" program
-#Summary(pl):	Kolejny wirtualny terminal, tym razem ca≥kiem niewielki
+#Summary(pl):	Kolejny wirtualny terminal, tym razem ca≈Çkiem niewielki
 #Group:		X11/Applications
 #
 #%description -n zterm
 #Pretty light-weight "yet another virtual terminal" program
 #
 #%description -n zterm -l pl
-#Kolejny wirtualny terminal, tym razem ca≥kiem niewielki
+#Kolejny wirtualny terminal, tym razem ca≈Çkiem niewielki
 
 %prep
 %setup -q
