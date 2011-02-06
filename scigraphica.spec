@@ -92,12 +92,12 @@ Interfejs python do procedur SciGraphica.
 %{__make} -C src python/sg.so
 
 %install
-
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_examplesdir},%{_desktopdir},%{py_sitedir}/sg}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_examplesdir},%{_desktopdir},%{py_sitedir}/sg}
+
 mv -f $RPM_BUILD_ROOT%{_datadir}/scigraphica/examples \
 	$RPM_BUILD_ROOT%{_examplesdir}/scigraphica
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
